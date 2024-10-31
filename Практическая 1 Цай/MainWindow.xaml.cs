@@ -50,7 +50,7 @@ namespace Практическая_1_Цай
         // О программе
         private void MenuItem_inf(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Цай Владислав, ИСП-31, Практическая 3, Вариант-11 \r\nДана матрица размера M × N.\\nНайти максимальный среди минимальных элементов ее строк", "Информация",MessageBoxButton.OK);
+            MessageBox.Show("Цай Владислав, ИСП-31, Практическая 3, Вариант-11 \r\nДана матрица размера M × N. \r\nНайти количество ее строк, элементы которых упорядочены по возрастанию.", "Информация",MessageBoxButton.OK);
         }
         //Очистить
         private void MenuItem_Clear(object sender, RoutedEventArgs e)
@@ -93,7 +93,11 @@ namespace Практическая_1_Цай
             if (int.TryParse(tbdiapmin.Text, out int min) && int.TryParse(tbdiapmax.Text, out int max) && int.TryParse(tbrow.Text, out int row) && int.TryParse(tbcol.Text, out int col))
             {
                 matrix = Mas.Fill(min,max,row,col);
-                dataGrid.ItemsSource = VisualArray.ToDataTable(matrix).DefaultView;
+                if (matrix != null)
+                {
+                    dataGrid.ItemsSource = VisualArray.ToDataTable(matrix).DefaultView;
+                }
+                else MessageBox.Show("Введите корректные значения", "Ошибка", MessageBoxButton.OK);
             }
             else MessageBox.Show("Введите корректные значения", "Ошибка");
         }
