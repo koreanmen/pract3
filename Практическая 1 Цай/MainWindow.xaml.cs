@@ -25,27 +25,6 @@ namespace Практическая_1_Цай
         }
         int[,] matrix;
 
-        //private void Button_Click(object sender, RoutedEventArgs e)
-        //{
-        //    bool f1;
-        //    f1 = Int32.TryParse(tbv.Text,out int n);
-        //    if (f1)
-        //    {
-        //        n = Convert.ToInt32(tbv.Text);
-        //        string s = "";
-        //        Random rnd = new Random();
-        //        for (int i = 0; i < n; i++)
-        //        {
-        //            int x = rnd.Next(1, n);
-        //            s += x + " ";
-        //        }
-        //        tbs.Text = s;
-        //        float mult = 0;
-        //        Class1.Func(n, s, out mult);
-        //        tbr.Text = mult.ToString();
-        //    }
-        //    else MessageBox.Show("Введите верные значения","Ошибка",MessageBoxButton.OK);
-        //}
 
         // О программе
         private void MenuItem_inf(object sender, RoutedEventArgs e)
